@@ -10,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <title>Food Mart</title>
-
 
 </head>
 
@@ -119,14 +120,12 @@
                 </ul>
             </div>
 
-
-
             <div class="tab-content" id="pills-tabContent">
-                
-                
+
+
                 <div class="tab-pane fade show active" style="color: red;" id="pills-snacks" role="tabpanel"
                     aria-labelledby="pills-snacks-tab">
-                    <div class="row" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
+                    <div class="row scroller" id="div1" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
                         <ul class="list-group list-group-horizontal category-list">
                             <li class="list-group-item m-3"><img src="images/calibratedimages/abc-sweet-soy.png">
                                 <div class="row" style="color: white;background-color: black;width: 135%;">
@@ -227,7 +226,7 @@
 
                 <div class="tab-pane fade show" style="color: red;" id="pills-drinks" role="tabpanel"
                     aria-labelledby="pills-drinks-tab">
-                    <div class="row" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
+                    <div class="row scroller" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
                         <ul class="list-group list-group-horizontal category-list">
                             <li class="list-group-item m-3"><img src="images/calibratedimages/abc-sweet-soy.png">
                                 <div class="row" style="color: white;background-color: black;width: 135%;">
@@ -326,7 +325,7 @@
 
                 <div class="tab-pane fade show" style="color: red;" id="pills-spices" role="tabpanel"
                     aria-labelledby="pills-spices-tab">
-                    <div class="row" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
+                    <div class="row scroller" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
                         <ul class="list-group list-group-horizontal category-list">
                             <li class="list-group-item m-3"><img src="images/calibratedimages/abc-sweet-soy.png">
                                 <div class="row" style="color: white;background-color: black;width: 135%;">
@@ -425,7 +424,7 @@
 
                 <div class="tab-pane fade show" style="color: red;" id="pills-soup" role="tabpanel"
                     aria-labelledby="pills-soup-tab">
-                    <div class="row" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
+                    <div class="row scroller" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
                         <ul class="list-group list-group-horizontal category-list">
                             <li class="list-group-item m-3"><img src="images/calibratedimages/abc-sweet-soy.png">
                                 <div class="row" style="color: white;background-color: black;width: 135%;">
@@ -524,7 +523,7 @@
 
                 <div class="tab-pane fade show" style="color: red;" id="pills-vegetables" role="tabpanel"
                     aria-labelledby="pills-vegetables-tab">
-                    <div class="row" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
+                    <div class="row scroller" style="overflow-x: auto;overflow-y: hidden;white-space: nowrap;">
                         <ul class="list-group list-group-horizontal category-list">
                             <li class="list-group-item m-3"><img src="images/calibratedimages/abc-sweet-soy.png">
                                 <div class="row" style="color: white;background-color: black;width: 135%;">
@@ -621,7 +620,9 @@
                 </div>
             </div>
 
-            <div class=" row ml" style="color: black;overflow-x: auto;white-space: nowrap;">
+
+
+            <div class=" row ml scroller" id="div1" style="color: black;overflow-x: auto;white-space: nowrap;">
                 <ul class="list-group list-group-horizontal category-list">
                     <li class="list-group-item m-3"><img src="images/calibratedimages/abc-sweet-soy.png">
                         <div class="row" style="color: white;background-color: black;width: 135%;">
@@ -716,7 +717,8 @@
                 </ul>
             </div>
 
-            <div class=" row ml" style="color: black;overflow-x: auto;white-space: nowrap;">
+
+            <div class=" row ml scroller" id="div2" style="color: black;overflow-x: auto;white-space: nowrap;">
                 <ul class="list-group list-group-horizontal category-list">
                     <li class="list-group-item m-3"><img src="images/calibratedimages/abc-sweet-soy.png">
                         <div class="row" style="color: white;background-color: black;width: 135%;">
@@ -836,8 +838,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
 
 
+    <script>
+        $(document).ready(function () {
+            $('.scroller').scroll(function (e) {
+                $('.scroller').scrollLeft(e.target.scrollLeft);
+            });
+            // $('#div2').on('scroll', function () {
+            //     $('#div1').scrollLeft($(this).scrollLeft());
+            // });
+            // $('#div1').on('scroll', function () {
+            //     $('#div2').scrollLeft($(this).scrollLeft());
+            // });
+
+        });
+    </script>
 </body>
 
 </html>
